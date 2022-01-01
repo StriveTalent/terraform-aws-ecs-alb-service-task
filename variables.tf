@@ -54,6 +54,12 @@ variable "subnet_ids" {
   default     = null
 }
 
+variable "security_group_enabled" {
+  type        = bool
+  description = "Whether to create default Security Group for ECS service."
+  default     = true
+}
+
 variable "security_group_ids" {
   description = "Security group IDs to allow in Service `network_configuration` if `var.network_mode = \"awsvpc\"`"
   type        = list(string)
